@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const WordSchema = new mongoose.Schema({
-  image: { type: String, required: true },
-  lao: { type: String, required: true },
-  thai: { type: String, required: true },
-  english: { type: String, required: true },
-  korean: { type: String, required: true },
+  image: { type: String, required: true, default: null},
+  lao: { type: String, required: true, default: null },
+  thai: { type: String, required: false, default: null },
+  english: { type: String, required: false, default: null },
+  korean: { type: String, required: true, default: null },
 });
 
 const Word = mongoose.model("Word", WordSchema);
